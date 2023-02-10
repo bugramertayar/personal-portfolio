@@ -1,0 +1,30 @@
+:root {
+  .light-mode {
+    --site-header-color: #b6c199;
+    --site-header-hover-color: #932432;
+    --site-header-active-color: #932432;
+    --site-background-color: #f3f3f3;
+    --text-color: #283747;
+  }
+}
+:root {
+  .dark-mode {
+    --site-header-color: #000000;
+    --site-header-hover-color: #1095c1;
+    --site-header-active-color: #1095c1;
+    --site-background-color: #292929;
+    --text-color: #ffebd0;
+  }
+}
+
+$all-colors: (
+  "site-header-color": var(--site-header-color),
+  "site-header-hover-color": var(--site-header-hover-color),
+  "site-header-active-color": var(--site-header-hover-color),
+  "site-background-color": var(--site-background-color),
+  "text-color": var(--text-color),
+);
+
+@function getColor($color) {
+  @return map-get($all-colors, $color);
+}

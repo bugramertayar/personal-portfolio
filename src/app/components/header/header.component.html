@@ -1,0 +1,19 @@
+<div class="site-header-container">
+  <div class="row">
+    <div class="col-4">
+      <div class="header-tabs-container">
+        <div [routerLink]="['/home']" routerLinkActive="active" class="header-tab">Home</div>
+        <div [routerLink]="['/about-me']" routerLinkActive="active" class="header-tab">About Me</div>
+        <div [routerLink]="['/playground']" routerLinkActive="active" class="header-tab">PlayGround
+        </div>
+        <div [routerLink]="['/contact']" routerLinkActive="active" class="header-tab">Contact</div>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="header-actions-container">
+        <i *ngIf="!isDarkMode" (click)="changeToDarkMode(true)" class="bi bi-moon-stars"></i>
+        <i *ngIf="isDarkMode" (click)="changeToDarkMode(false)" class="bi bi-moon-stars-fill"></i>
+      </div>
+    </div>
+  </div>
+</div>

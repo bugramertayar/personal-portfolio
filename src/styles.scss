@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/styles/colors";
+body {
+  margin: 0;
+  padding: 0;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    getColor(site-background-color) 0%,
+    getColor(site-background-color) 90%
+  );
+}

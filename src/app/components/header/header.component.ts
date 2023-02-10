@@ -1,0 +1,31 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss'],
+})
+export class HeaderComponent implements OnInit {
+  isDarkMode: boolean = false;
+  constructor() {}
+
+  ngOnInit(): void {
+    if (document.body.classList.contains('dark-mode')) {
+      this.isDarkMode = true;
+    } else {
+      this.isDarkMode = false;
+    }
+  }
+
+  changeToDarkMode(changeToDarkMode: boolean) {
+    if (changeToDarkMode) {
+      document.body.classList.remove('light-mode');
+      document.body.classList.add('dark-mode');
+      this.isDarkMode = true;
+    } else {
+      document.body.classList.remove('dark-mode');
+      document.body.classList.add('light-mode');
+      this.isDarkMode = false;
+    }
+  }
+}
