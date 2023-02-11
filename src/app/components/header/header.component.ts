@@ -10,10 +10,11 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    if (document.body.classList.contains('dark-mode')) {
-      this.isDarkMode = true;
+    console.log();
+    if (localStorage.getItem('mode') === 'dark-mode') {
+      this.changeToDarkMode(true);
     } else {
-      this.isDarkMode = false;
+      this.changeToDarkMode(false);
     }
   }
 
@@ -21,10 +22,12 @@ export class HeaderComponent implements OnInit {
     if (changeToDarkMode) {
       document.body.classList.remove('light-mode');
       document.body.classList.add('dark-mode');
+      localStorage.setItem('mode', 'dark-mode');
       this.isDarkMode = true;
     } else {
       document.body.classList.remove('dark-mode');
       document.body.classList.add('light-mode');
+      localStorage.setItem('mode', 'light-mode');
       this.isDarkMode = false;
     }
   }
