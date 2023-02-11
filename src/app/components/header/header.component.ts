@@ -10,7 +10,6 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log();
     if (localStorage.getItem('mode') === 'dark-mode') {
       this.changeToDarkMode(true);
     } else {
