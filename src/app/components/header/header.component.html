@@ -1,19 +1,32 @@
 <div class="site-header-container">
-  <div class="row">
-    <div class="col-4">
-      <div class="header-tabs-container">
-        <div [routerLink]="['/home']" routerLinkActive="active" class="header-tab">Home</div>
-        <div [routerLink]="['/about-me']" routerLinkActive="active" class="header-tab">About Me</div>
-        <div [routerLink]="['/playground']" routerLinkActive="active" class="header-tab">PlayGround
-        </div>
-        <div [routerLink]="['/contact']" routerLinkActive="active" class="header-tab">Contact</div>
-      </div>
+  <div class="header-actions-container">
+    <div class="mode-icon-container">
+      <i *ngIf="!isDarkMode" (click)="changeToDarkMode(true)" class="bi bi-moon-stars ms-2"></i>
+      <i *ngIf="isDarkMode" (click)="changeToDarkMode(false)" class="bi bi-moon-stars-fill ms-2"></i>
+      <!-- <i class="bi bi-chevron-double-left"></i> -->
+      <!-- <i class="bi bi-chevron-double-right"></i> -->
     </div>
-    <div class="col-8">
-      <div class="header-actions-container">
-        <i *ngIf="!isDarkMode" (click)="changeToDarkMode(true)" class="bi bi-moon-stars"></i>
-        <i *ngIf="isDarkMode" (click)="changeToDarkMode(false)" class="bi bi-moon-stars-fill"></i>
-      </div>
+    <div class="profile-img-container">
+      <img class="css-shadow" src="../../../assets/images/profile.jpeg" />
+      <span class="profile-name">Buğra Mert Ayar</span>
     </div>
+
   </div>
+  <div class="header-tabs-container">
+    <div [routerLink]="['/home']" routerLinkActive="active" class="header-tab">Home</div>
+    <div [routerLink]="['/about-me']" routerLinkActive="active" class="header-tab">About Me</div>
+    <div [routerLink]="['/resume']" routerLinkActive="active" class="header-tab">Resume</div>
+    <div [routerLink]="['/playground']" routerLinkActive="active" class="header-tab">PlayGround
+    </div>
+    <div [routerLink]="['/contact']" routerLinkActive="active" class="header-tab">Contact</div>
+  </div>
+
+  <div class="header-social-container">
+    <i class="bi bi-linkedin"></i>
+    <i class="bi bi-github"></i>
+    <i class="bi bi-medium"></i>
+    <i class="bi bi-instagram"></i>
+    <i class="bi bi-twitter"></i>
+  </div>
+
 </div>

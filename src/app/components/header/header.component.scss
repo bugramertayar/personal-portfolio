@@ -2,11 +2,18 @@
 
 .site-header-container {
   background-color: getColor(site-header-color);
-  padding: 1rem 2rem;
-
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 0 5px -2px getColor(site-header-color);
   .header-tabs-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
 
     .header-tab {
       cursor: pointer;
@@ -42,16 +49,64 @@
   }
 
   .header-actions-container {
+    .mode-icon-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      i {
+        cursor: pointer;
+        color: getColor(text-color);
+        font-size: 20px;
+      }
+
+      i:hover {
+        color: getColor(site-header-hover-color);
+      }
+    }
+
+    .profile-img-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+
+      .css-shadow {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        border: 3px solid getColor(text-color);
+        filter: drop-shadow(0 0 8px getColor(text-color));
+        object-fit: cover;
+      }
+
+      .profile-name {
+        font-size: 18px;
+        cursor: pointer;
+        color: getColor(text-color);
+        font-weight: bold;
+      }
+
+      .profile-name:hover {
+        color: getColor(site-header-hover-color);
+      }
+    }
+  }
+
+  .header-social-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 1rem;
-    height: 100%;
-    align-items: center;
 
     i {
       cursor: pointer;
       color: getColor(text-color);
       font-size: 18px;
+    }
+
+    i:hover {
+      color: getColor(site-header-hover-color);
     }
   }
 }

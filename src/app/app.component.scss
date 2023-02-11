@@ -1,0 +1,12 @@
+.site-container {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  height: 100%;
+  .header-container {
+    grid-column: 1 / 2;
+  }
+
+  .app-container {
+    grid-column: 2 / 3;
+  }
+}
