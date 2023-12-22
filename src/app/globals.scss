@@ -1,0 +1,104 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html {
+  width: 100%;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  background-color: #0e1111;
+  color: #ffffff;
+}
+
+@function createShadow($shadowsCount, $radius, $color, $startAngle) {
+  $sh: '0px 0px 0px transparent';
+  $angle: $startAngle / $shadowsCount;
+  @for $i from 1 through $shadowsCount {
+    $x: $radius * cos($angle * $i);
+    $y: $radius * sin($angle * $i);
+    $sh: '#{$sh}, #{$x} #{$y} #{$color}';
+  }
+  @return unquote($sh);
+}
+
+.profile-avatar {
+  --border-color: #4255d4;
+  --background-color: #212752;
+  --avatar-size: 300px;
+  height: var(--avatar-size);
+  width: var(--avatar-size);
+  border: 4px solid var(--border-color);
+  padding: 6px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.4s;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    transform: rotate(45deg);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  &::before {
+    box-shadow: createShadow(8, 7rem, #4255d4, 360deg);
+    animation: animate-2 1s ease-in-out infinite;
+  }
+  &::after {
+    box-shadow: createShadow(16, 6rem, #4255d4, 360deg);
+    transform: rotate(12deg);
+    animation: animate-1 1s ease-in-out infinite;
+  }
+  img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes animate-1 {
+  0%,
+  100% {
+    box-shadow: createShadow(16, 12rem, #4255d4, 360deg);
+  }
+  50% {
+    box-shadow: createShadow(16, 11rem, #4255d4, 360deg);
+  }
+}
+
+@keyframes animate-2 {
+  0%,
+  100% {
+    box-shadow: createShadow(8, 11rem, #4255d4, 360deg);
+  }
+  50% {
+    box-shadow: createShadow(8, 12rem, #4255d4, 360deg);
+  }
+}
