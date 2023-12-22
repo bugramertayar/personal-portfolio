@@ -1,5 +1,7 @@
 export default function Home() {
-  <>
-    <div className="text-lg">Playground</div>
-  </>;
+  return (
+    <>
+      <div className="text-lg">Home</div>
+    </>
+  );
 }

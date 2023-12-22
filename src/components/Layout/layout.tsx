@@ -5,7 +5,7 @@ export default function Layout({ children }: PropsWithChildren) {
   return (
     <>
       <Navbar />
-      {children}
+      <div className="pt-20 pl-20 h-full">{children}</div>
     </>
   );
 }
