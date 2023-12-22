@@ -5,13 +5,13 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col md:flex-row gap-5 h-4/5">
-        <div className="md:w-2/5 flex items-center justify-center 2xl:h-full">
+        <div className="md:w-2/5 flex items-center justify-center 2xl:h-full pt-20">
           <div className="profile-avatar">
             <Image src="/images/profile.jpg" width={300} height={300} alt="Profile" priority={true} />
           </div>
         </div>
-        <div className="md:w-3/5 md:mt-3">
-          <div className="flex flex-col justify-center pl-20 gap-4 2xl:h-full">
+        <div className="md:w-3/5 md:mt-5">
+          <div className="flex flex-col justify-center p-5 gap-4 2xl:h-full">
             <span className="text-4xl text-[#D95C48] font-semibold">HI I'M BUĞRA MERT AYAR</span>
             <span className="text-2xl font-medium">I am Senior Frontend Developer</span>
 
