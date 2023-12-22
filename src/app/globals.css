@@ -21,7 +21,6 @@ body {
   letter-spacing: normal;
   height: 100%;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Inter', sans-serif;
-  background-color: #222222;
+  background-color: #0e1111;
   color: #ffffff;
 }

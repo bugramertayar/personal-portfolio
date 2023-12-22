@@ -12,10 +12,10 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-[#222222] fixed w-full z-20 top-0 start-0 pt-4">
+      <nav className="bg-[#0e1111] fixed w-full z-20 top-0 start-0 pt-2">
         <div className="flex flex-wrap items-center justify-between mx-auto p-4 px-20">
           <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <span className="self-center text-2xl font-semibold whitespace-nowrap text-[#D95C48]">Buğra Mert Ayar</span>
+            <span className="self-center text-2xl font-bold whitespace-nowrap text-[#D95C48]">Buğra Mert Ayar</span>
           </Link>
           <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
