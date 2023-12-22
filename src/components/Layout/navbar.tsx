@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-[#0e1111] fixed w-full z-20 top-0 start-0 pt-2">
+      <nav className="bg-[#0e1111] fixed w-full z-20 top-0 start-0 pt-2 shadow-2xl">
         <div className="flex flex-wrap items-center justify-between mx-auto p-4 px-20">
           <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <span className="self-center text-2xl font-bold whitespace-nowrap text-[#D95C48]">Buğra Mert Ayar</span>

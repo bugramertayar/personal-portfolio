@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Contact() {
   return (
-    <div className="flex flex-col items-center justify-start mt-20 gap-4 w-1/2 mx-auto text-center shadow-2xl p-20 bg-[#232b2b] rounded">
+    <div className="flex flex-col items-center justify-start mt-10 gap-4 w-1/2 mx-auto text-center shadow-2xl p-20 bg-[#232b2b] rounded">
       <div className="text-3xl font-semibold text-[#D95C48]">Contact Me</div>
       <div className="text-lg">Feel free to reach out and connect! You can find me on various social media platforms and explore my projects on GitHub. I'm always open to interesting conversations and collaborations. Feel free to drop me a message through any of the following links</div>
       <div className="flex gap-4">
